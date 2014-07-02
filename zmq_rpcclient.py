@@ -11,6 +11,7 @@ class ZmqTransport(xmlrpclib.Transport):
         xmlrpclib.Transport.__init__(self)
         self.context = zmq.Context()
         self.connection = self.context.socket(zmq.REQ)
+        self.set_hwm(10)
         self.connection.connect(uri)
 
 

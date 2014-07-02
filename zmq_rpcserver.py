@@ -33,5 +33,4 @@ if __name__ == '__main__':
     server = ZmqXMLRPCServer()
     server.register_function(hello)
     server.register_function(add)
-    server.register_function(wget)
     server.serve_forever()
